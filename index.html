@@ -3,13 +3,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,intial-scale=1">
         <title>WebAR_stdbrain</title>
-        <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
-        <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
     </head>
     <body style="margin:0px; overflow:hidden;">
+        <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+        <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
 
-
-        <a-scene embedded arjs="debugUIEnabled:false; sourceType: webcam;" renderer="gammaOutPut: true;" vr-mode-ui="enabled: false">
+        <a-scene embedded arjs="debugUIEnabled:false;" "sourceType: webcam;" renderer="gammaOutPut: true;" vr-mode-ui="enabled: false">
             <a-assets>
                 <a-asset-item id="brainstd" src="WBAvarageBrainSmall.glb"></a-asset-item>
             </a-assets>  
@@ -19,11 +18,13 @@
             cursor="fuse: false; rayOrigin: mouse"
             preset="custom" 
             type='pattern' 
-            url="pattern-qr20200222125418164.patt">
-            <a-entity> 
-                gltf-model="#brainstd"
-                scale="0.1 0.1 0.1"
-                rotation="-20 0 0"</a-entity>
+            url="./pattern-qr20200222125418164.patt">
+            <a-entity
+            gltf-model="#brainstd"
+            scale="0.1 0.1 0.1"
+            rotation="-20 0 0"></a-entity>
+            </a-entity>
+
             </a-marker>
 
 
